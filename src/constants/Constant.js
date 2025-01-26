@@ -1,8 +1,8 @@
 const devURL = "http://localhost:3010/";
 const proURL = "https://hackathon-backend-production-2663.up.railway.app/";
 
-// const BASE_URL = proURL;
-const BASE_URL = devURL;
+const BASE_URL = proURL;
+// const BASE_URL = devURL;
 
 export const AppRoutes = {
 	login: BASE_URL + "users/login",
