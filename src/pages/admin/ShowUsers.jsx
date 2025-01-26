@@ -1,9 +1,12 @@
 import React from "react";
-import TableUi from "../../components/TableUI";
+// // import TableUi from "src/components/TableUi.jsx";
+// // // import TableUi from "../../components/TableUI";
+// TableUi
 import Header from "../../components/adminComponents/Header";
 import Sidebar from "../../components/adminComponents/Sidebar";
 import { Breadcrumb } from "antd";
 import { Link } from "react-router-dom";
+import TableUi from "../../components/TableUI";
 
 export default function ShowUsers() {
 	return (
