@@ -27,6 +27,13 @@ export default function Sidebar() {
 					<h3 className="text-[18px] text-">Users</h3>
 				</Link>
 				<Link
+					to="/admin/loancategories"
+					className="flex items-center gap-3 bg-green-500 p-2 rounded-lg"
+				>
+					<CreditCard />
+					<h3 className="text-[18px] text-">Loan Categories</h3>
+				</Link>
+				<Link
 					to="/admin/dashboard"
 					className="flex items-center gap-3 bg-green-500 p-2 rounded-lg"
 				>

@@ -6,6 +6,7 @@ import LandingPage from "../pages/landing/Home";
 import Dashboard from "../pages/admin/Dashboard";
 import Signup from "../pages/authentication/Signup";
 import ShowUsers from "../pages/admin/ShowUsers";
+import LoanCategories from "../pages/admin/LoanCategories";
 
 export default function RouterConfig() {
 	return (
@@ -22,6 +23,7 @@ export default function RouterConfig() {
 					{/* Admin Pages */}
 					<Route path="/admin/dashboard" element={<Dashboard />} />
 					<Route path="/admin/userslist" element={<ShowUsers />} />
+					<Route path="/admin/loancategories" element={<LoanCategories />} />
 				</Routes>
 			</AuthProvider>
 		</BrowserRouter>
