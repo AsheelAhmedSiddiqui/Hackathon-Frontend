@@ -14,17 +14,17 @@ export const AppRoutes = {
 	// Categories Routes
 	getCategories: BASE_URL + "categories",
 	addCategory: BASE_URL + "categories",
-	updateCategory: BASE_URL + "category/",
-	deleteCategory: BASE_URL + "category/",
+	updateCategory: BASE_URL + "categories/",
+	deleteCategory: BASE_URL + "categories/",
 
-	getCategoriesWithSubCategories: BASE_URL + "category/with-subcategories",
-	getSingleCategories: BASE_URL + "category/singleCategory/",
+	getCategoriesWithSubCategories: BASE_URL + "categories/with-subcategories",
+	getSingleCategories: BASE_URL + "categories/singleCategory/",
 
 	// SubCategories Routes
-	getSubCategories: BASE_URL + "subCategory",
-	addSubCategory: BASE_URL + "subCategory",
-	updateSubCategory: BASE_URL + "subCategory/",
-	deleteSubCategory: BASE_URL + "subCategory/",
+	getSubCategories: BASE_URL + "subcategories",
+	addSubCategory: BASE_URL + "subcategories",
+	updateSubCategory: BASE_URL + "subcategories/",
+	deleteSubCategory: BASE_URL + "subcategories/",
 
-	addCalculate: BASE_URL + "calculate/calculate",
+	// addCalculate: BASE_URL + "calculate/calculate",
 };
