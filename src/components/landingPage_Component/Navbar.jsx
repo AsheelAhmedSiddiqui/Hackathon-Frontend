@@ -2,9 +2,10 @@ import { Avatar } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
+import { Button } from "antd";
 
 export default function Navbar() {
-	const { user } = useAuth();
+	const { user, logout } = useAuth();
 
 	console.log(user);
 	return (
@@ -87,11 +88,31 @@ export default function Navbar() {
 								</Link>
 							</li>
 						</ul>
-						<Avatar >
-							<span className="text-white">
-								{user?.name?.slice(0, 2).toUpperCase()}
-							</span>
-						</Avatar>
+						{user ? (
+							<Avatar>
+								<span className="text-white">
+									{user?.name?.slice(0, 2).toUpperCase()}
+								</span>
+							</Avatar>
+						) : (
+							<Link to={"/auth/login"}>
+								<Button color="green" type="link" variant="filled">
+									Login
+								</Button>
+							</Link>
+						)}
+
+						{user && (
+							<Button
+								danger
+								variant="filled"
+								type="primary"
+								color="danger"
+								onClick={logout}
+							>
+								Logout
+							</Button>
+						)}
 					</div>
 				</div>
 			</div>
