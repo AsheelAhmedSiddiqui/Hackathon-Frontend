@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 export default function LoanCategories() {
 	const [categories, setCategories] = useState("");
 	const [isModalOpen, setIsModalOpen] = useState(false);
-    const [title, setTitle] = useState("")
+	const [title, setTitle] = useState("");
 
 	const handleOpenModal = () => {
 		setIsModalOpen(true); // Open both modals

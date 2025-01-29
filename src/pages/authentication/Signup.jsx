@@ -25,8 +25,8 @@ export default function Signup() {
 			message.success("Signup successful! Please log in.");
 			navigate("/login"); // Redirect to Login
 		} catch (error) {
-			console.error("Signup failed:", error.response?.data || error.message);
-			message.error(error.response?.data?.message || "Signup failed!");
+			console.error("Signup failed:", error.response?.data);
+			message.error(error.response?.data?.msg || "Signup failed!");
 		} finally {
 			setLoading(false);
 		}

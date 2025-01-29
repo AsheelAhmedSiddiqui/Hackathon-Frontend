@@ -18,6 +18,7 @@ export default function Login() {
 	const onFinish = async (values) => {
 		setLoading(true);
 		try {
+			console.log(values);
 			const res = await axios.post(AppRoutes.login, values);
 			setUser(res.data);
 
@@ -47,12 +48,18 @@ export default function Login() {
 				<div className="w-lg flex items-center justify-center flex-col gap-4">
 					<Form name="login" onFinish={onFinish} layout="vertical">
 						<Form.Item
-							label="Email"
-							name="email"
-							rules={[{ required: true, message: "Please enter your email!" }]}
+							label="Cnic"
+							name="cnic"
+							rules={[
+								{
+									required: true,
+									message: "Please enter your correct Cnic without -- sign !",
+								},
+							]}
 						>
 							<Input
-								placeholder="Email"
+								placeholder="Cnic"
+								type="number"
 								size="large"
 								style={{
 									borderRadius: "6px",
@@ -84,7 +91,7 @@ export default function Login() {
 							}}
 						>
 							Don't have an account?{" "}
-							<Link to="/signup" style={{ color: "#1890ff" }}>
+							<Link to="/auth/signup" style={{ color: "#1890ff" }}>
 								Signup
 							</Link>
 						</div>
