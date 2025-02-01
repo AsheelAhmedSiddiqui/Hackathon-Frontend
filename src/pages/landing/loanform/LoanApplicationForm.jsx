@@ -25,6 +25,7 @@ const steps = [
 
 function LoanApplicationForm() {
 	const [form] = Form.useForm();
+	const [loading, setLoading] = useState(false);
 	const [current, setCurrent] = useState(0);
 
 	const next = () => {
@@ -43,7 +44,9 @@ function LoanApplicationForm() {
 	};
 
 	const onFinish = (values) => {
+		setLoading(true);
 		console.log("Form values:", values);
+
 		message.success("Application submitted successfully!");
 	};
 
