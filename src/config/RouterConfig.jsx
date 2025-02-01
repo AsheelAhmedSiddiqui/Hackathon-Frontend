@@ -7,6 +7,7 @@ import Dashboard from "../pages/admin/Dashboard";
 import Signup from "../pages/authentication/Signup";
 import ShowUsers from "../pages/admin/ShowUsers";
 import LoanCategories from "../pages/admin/LoanCategories";
+import LoanApplicationForm from "../pages/landing/loanform/LoanApplicationForm";
 
 export default function RouterConfig() {
 	return (
@@ -15,6 +16,10 @@ export default function RouterConfig() {
 				<Routes>
 					{/* Landing Pages */}
 					<Route path="/" element={<LandingPage />}></Route>
+					<Route
+						path="/loanapplication"
+						element={<LoanApplicationForm />}
+					></Route>
 
 					{/* Authentication */}
 					<Route path="/auth/login" element={<Login />} />

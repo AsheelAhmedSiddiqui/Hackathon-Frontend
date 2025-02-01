@@ -55,28 +55,24 @@ function LoanCalculator() {
 						<Title level={3} style={{ textAlign: "center" }}>
 							Loan Calculator
 						</Title>
-
 						<Input
 							placeholder="Loan Amount"
 							value={loanAmount}
-							onChange={(e) => setLoanAmount(e.target.value)}
 							prefix="PKR"
+							onChange={(e) => setLoanAmount(e.target.value)}
 						/>
-
 						<Input
 							placeholder="Intial Deposit"
 							value={intialDeposit}
 							onChange={(e) => setIntialDeposit(e.target.value)}
 							prefix="PKR"
 						/>
-
 						<Input
 							placeholder="Tenure (Years)"
 							value={tenure}
 							onChange={(e) => setTenure(e.target.value)}
 							suffix="Years"
 						/>
-
 						<Button
 							type="primary"
 							icon={<CalculatorOutlined />}
@@ -85,7 +81,6 @@ function LoanCalculator() {
 						>
 							Calculate Monthly
 						</Button>
-
 						{monthlyPayableAmount !== null && totalPayable !== null && (
 							<Card
 								style={{
